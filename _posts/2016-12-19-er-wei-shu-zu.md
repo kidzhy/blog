@@ -4,7 +4,7 @@ title: 利用递归将多维数组转换成一维数组
 ---
 
     function getArr(arr){
-        if(arr.length>0&&Object.prototype.toString.call([])==="[object Array]"){
+        if(Object.prototype.toString.call([])==="[object Array]"&&arr.length>0){
             var ar = arr.pop();
             return Array.prototype.concat.call(getArr(arr),getArr(ar));
         }
