@@ -25,4 +25,11 @@
     <body class="am-container am-animation-fade">
         {{content}}
     </body>
+    <script>
+         if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                    .register('sw.js')
+                    .then(function() { console.log('Service Worker Registered'); });
+        }
+    </script>
 </html>
