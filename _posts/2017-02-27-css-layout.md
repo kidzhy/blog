@@ -72,9 +72,9 @@ table布局，金玉其外败絮其中。
 </style>
 
 <div>
-    <table>
+    <table border="1">
     <thead>
-        <td colspan=3>header</td>
+        <td colspan="3">header</td>
     </thead>
     <tbody>
         <tr>
@@ -84,7 +84,7 @@ table布局，金玉其外败絮其中。
         </tr>
     </tbody>
     <tfoot>
-        <td colspan=3>footer</td>
+        <td colspan="3">footer</td>
     </tfoot>
 </table>
 </div>
