@@ -72,7 +72,7 @@ table布局，金玉其外败絮其中。
 </style>
 
 <div>
-    <table border=1>
+    <table>
     <thead>
         <td colspan=3>header</td>
     </thead>
