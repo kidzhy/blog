@@ -38,9 +38,9 @@ table布局，金玉其外败絮其中。
         </thead>
         <tbody>
             <tr>
-            <td>left</td>
-            <td>center</td>
-            <td>right</td>
+                <td>left</td>
+                <td>center</td>
+                <td>right</td>
             </tr>
         </tbody>
         <tfoot>
@@ -71,8 +71,8 @@ table布局，金玉其外败絮其中。
     }
 </style>
 
-
-<table border=1>
+<div>
+    <table border=1>
     <thead>
         <td colspan=3>header</td>
     </thead>
@@ -87,6 +87,7 @@ table布局，金玉其外败絮其中。
         <td colspan=3>footer</td>
     </tfoot>
 </table>
+</div>
 
 
 ### div+float布局
