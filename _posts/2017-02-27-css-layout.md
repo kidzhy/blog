@@ -48,6 +48,7 @@ table布局，金玉其外败絮其中。
         </tfoot>
     </table>
 
+
 <style>
     table{
         width:600px;
