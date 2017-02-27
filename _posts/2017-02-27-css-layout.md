@@ -70,6 +70,7 @@ table布局，金玉其外败絮其中。
     }
 </style>
 
+
 <table border=1>
     <thead>
         <td colspan=3>header</td>
