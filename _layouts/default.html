@@ -1,35 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="https://cdn.staticfile.org/amazeui/2.7.2/css/amazeui.min.css">
-        <title>{{page.title}}</title>
-        <style>
-            ul,ol{
-                margin: 0 !important;
-            }
-            li>a{
-                padding: 0.6rem 0;
-                display: block;
-            }
-            body{
-                margin: 26px auto;
-            }
-            li{
-                border-bottom: 1px solid #eee;
-                padding: 12px 0;
-                display: block;
-            }
-        </style>
-    </head>
-    <body class="am-container am-animation-fade">
-        {{content}}
-    </body>
-    <script>
-         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                    .register('sw.js')
-                    .then(function() { console.log('Service Worker Registered'); });
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/amazeui/2.7.2/css/amazeui.min.css">
+    <title>{{page.title}}</title>
+    <style>
+        ul,
+        ol {
+            margin: 0 !important;
         }
-    </script>
+        
+        li>a {
+            padding: 0.6rem 0;
+            display: block;
+        }
+        
+        body {
+            margin: 26px auto;
+        }
+        
+        li {
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            display: block;
+        }
+        
+        #cir {
+            animation: cir 1s cubic-bezier(.93, .04, .11, .83)
+        }
+        
+        @keyframes cir {
+            0% {
+                stroke-dasharray: 0 942.1
+            }
+            100% {
+                stroke-dasharray: 942.1 942.1
+            }
+        }
+        
+        #sm {
+            animation: sm 0.6s cubic-bezier(.6, .33, .08, .99) 1s forwards;
+            stroke-dasharray: 0 257.1;
+        }
+        
+        @keyframes sm {
+            0% {
+                stroke-dasharray: 0 257.1
+            }
+            100% {
+                stroke-dasharray: 257.1 257.1
+            }
+        }
+        
+        .eye {
+            animation: eye 0.6s cubic-bezier(.09, .67, .15, .83) 1s forwards;
+            stroke-dasharray: 0 188.2;
+        }
+        
+        @keyframes eye {
+            0% {
+                stroke-dasharray: 0 188.2
+            }
+            100% {
+                stroke-dasharray: 188.2 188.2
+            }
+        }
+        
+        .ball {
+            transform: scale(0, 0);
+            animation: ball 0.4s cubic-bezier(.6, -0.08, 0, .81) 1.6s forwards, bl 1s linear 2s infinite alternate;
+            transform-origin: center;
+        }
+        
+        @keyframes ball {
+            0% {
+                transform: scale(0, 0);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+        
+        @keyframes bl {
+            0% {
+                transform: translate(-5px)
+            }
+            100% {
+                transform: translate(100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="am-container am-animation-fade">
+    <svg width=200 height=200 viewbox='0,0,400,400'>
+        <circle id='cir' cx=200 cy=200 r=150 fill=none stroke=#00bcd4 />
+        <path id='sm' d='M150,250 A50,50 0,0 0,250,250 Z' fill=none stroke='#2196F3' />
+        <g>
+            <circle class='eye' cx=140 cy=160 r=30 fill=none stroke=#607d8b />
+            <circle class='eye' cx=260 cy=160 r=30 fill=none stroke=#607d8b />
+            <circle class='ball' cx=130 cy=150 r=10 fill=#03a9f4 />
+            <circle class='ball' cx=250 cy=150 r=10 fill=#03a9f4 />
+        </g>
+    </svg>
+    {{content}}
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('sw.js')
+            .then(function () { console.log('Service Worker Registered'); });
+    }
+
+</script>
+
 </html>
