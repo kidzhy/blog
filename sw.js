@@ -2,6 +2,7 @@ var cacheName = 'kidzhy-blog'
 
 var filesCache = [
     '/blog',
+    '/',
     'https://cdn.staticfile.org/amazeui/2.7.2/css/amazeui.min.css'
 ]
 
