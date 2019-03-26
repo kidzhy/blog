@@ -12,7 +12,7 @@ linux不熟，走了很多弯路，看到一个文章如何简单安装node.js�
 
 2. 解压安装
 
-    tar -C /usr/local --strip-components 1 -xvf node-v*
+    sudo tar --strip-components 1 -xvf node-v* -C /usr/local
 
 ps:如果没有gzip压缩的使用-xvf
 
